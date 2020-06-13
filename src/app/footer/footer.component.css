@@ -1,0 +1,91 @@
+#footer {
+  background-color: #972a29;
+  color: white;
+  height: 180px;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#first-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#second-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+
+select {
+  font-size: 18px;
+  background-color: #972a29;
+  color: white;
+  padding: 5px;
+  width: 150px;
+}
+
+.select_div {
+  border: solid white 1px;
+}
+
+.dummy_div {
+  background-color: #972a29;
+  height: 40px;
+  width: 100px;
+}
+
+#first-row div:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 414px) {
+  #footer {
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+    height: 120px;
+  }
+
+  select {
+    font-size: 12px;
+    padding: 5px;
+    width: 100px;
+    margin-left: 2px;
+  }
+
+  select option {
+    padding: 20px;
+    margin-left: 10px;
+  }
+
+  .dummy_div {
+    display: none;
+  }
+
+  #second-row {
+    font-size: 10px;
+    justify-content: space-around;
+  }
+
+  .copyright {
+    width: 150px;
+    margin-right: 2px;
+  }
+
+  #first-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #first-row div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
