@@ -1,8 +1,8 @@
 <div id="navbar">
-  <div>All Federations</div>
-  <div>AFC</div>
-  <div>CAF</div>
-  <div>CONCACAF</div>
-  <div>CONMEBOL</div>
-  <div>UEFA</div>
+  <div routerLink="all" routerLinkActive="active">All Federations</div>
+  <div (click)="changeToAfc()">AFC</div>
+  <div (click)="changeToCaf()">CAF</div>
+  <div (click)="changeToConcacaf()">CONCACAF</div>
+  <div (click)="changeToConmebol()">CONMEBOL</div>
+  <div (click)="changeToUefa()">UEFA</div>
 </div>

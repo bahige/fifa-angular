@@ -1,7 +1,17 @@
 <div id="header">
   <div id="logo_container">
-    <img class="logo" src="../../../assets/wc_logo.png" alt="wc_logo" />
-    <img class="social_media" src="../../../assets/three_menu.png" alt="menu" />
+    <img
+      routerLink="/home"
+      class="logo"
+      src="../../../assets/wc_logo.png"
+      alt="wc_logo"
+    />
+    <img
+      (click)="displayNavbar()"
+      class="social_media"
+      src="../../../assets/three_menu.png"
+      alt="menu"
+    />
   </div>
   <div id="social_media_container">
     <img

@@ -1,3 +1,47 @@
 #body {
+  display: grid;
   width: 100vw;
+}
+
+.navbar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 15vw;
+}
+
+.body_comp {
+  grid-column-start: 2;
+  width: 85vw;
+}
+
+.body_comp_expand {
+  grid-column-start: 1;
+  width: 100vw;
+}
+
+.navbar_hide {
+  display: none;
+}
+
+@media screen and (max-width: 414px) {
+  .navbar {
+    width: 25vw;
+    font-size: 12px;
+  }
+
+  .body_comp {
+    grid-column-start: 2;
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 1024px) {
+  .navbar {
+    width: 25vw;
+  }
+
+  .body_comp {
+    grid-column-start: 2;
+    width: 75vw;
+  }
 }

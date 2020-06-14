@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+:focus {
+  outline: 0 !important;
+}
+
 .logo {
   width: 100px;
   height: 100px;

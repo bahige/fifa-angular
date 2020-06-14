@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+:focus {
+  outline: 0 !important;
+}
+
 #navbar div {
   width: 100%;
   height: 100px;
@@ -27,13 +31,17 @@
   opacity: 0.4;
 }
 
+div[routerLink]:active {
+  border: none;
+}
+
 @media screen and (max-width: 414px) {
-  .navbar {
+  #navbar {
     font-size: 12px;
     height: 70vh;
   }
 
-  .navbar div {
+  #navbar div {
     height: 75px;
     line-height: 75px;
     text-align: center;
@@ -41,12 +49,12 @@
 }
 
 @media screen and (min-width: 415px) and (max-width: 768px) {
-  .navbar {
+  #navbar {
     font-size: 16px;
     height: 70vh;
   }
 
-  .navbar div {
+  #navbar div {
     height: 100px;
     line-height: 100px;
     text-align: center;
@@ -54,12 +62,12 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .navbar {
+  #navbar {
     font-size: 18px;
     height: 70vh;
   }
 
-  .navbar div {
+  #navbar div {
     height: 150px;
     line-height: 150px;
     text-align: center;
