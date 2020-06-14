@@ -92,17 +92,17 @@
 
   #caption {
     font-size: 22px;
-    width: 200px;
+    width: 150px;
     height: 50px;
     line-height: 50px;
   }
 
   .singleTeam {
     height: 300px;
-    width: 250px;
   }
 
   #teams-grid {
     height: 70vh;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

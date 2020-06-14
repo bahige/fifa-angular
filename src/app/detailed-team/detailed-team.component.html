@@ -12,8 +12,29 @@
     <div class="caption">Federation: {{ team.federation }}</div>
   </div>
   <div class="container">
-    <button>
+    <button (click)="displayModal()">
       Team Players
     </button>
+  </div>
+</div>
+
+<div id="modal" [style.display]="displayProperty">
+  <div id="player_card">
+    <div class="modal_title">Team Players</div>
+    <div id="players_grid">
+      <div *ngFor="let player of team.players" id="player_container">
+        <div>
+          <img class="player_img" [src]="player.image" [alt]="player.name" />
+        </div>
+        <div class="player_caption">{{ player.name }}</div>
+        <div class="player_caption">Age: {{ player.age }}</div>
+        <div class="player_caption">Club: {{ player.club }}</div>
+      </div>
+    </div>
+    <div>
+      <button (click)="closeModal()">
+        Close
+      </button>
+    </div>
   </div>
 </div>

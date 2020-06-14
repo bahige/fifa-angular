@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
+  opacity: 1;
 }
 
 .container,
@@ -27,6 +29,7 @@
   width: 20vw;
   height: 20vw;
   border-radius: 20vw;
+  border: black solid 1px;
 }
 
 .caption,
@@ -81,6 +84,7 @@ button {
   button {
     width: 50vw;
     padding: 1vw;
+    font-size: 20px;
   }
 
   .image_logo {
@@ -113,6 +117,7 @@ button {
     font-size: 28px;
     margin: 5px;
     width: 60vw;
+    padding: 2vw;
   }
 
   button {
@@ -122,9 +127,9 @@ button {
   }
 
   .title {
-    font-size: 40px;
+    font-size: 34px;
     width: 60vw;
-    padding: 1vw;
+    padding: 2vw;
   }
 
   .container {
@@ -153,5 +158,105 @@ button {
 
   #whole_container {
     height: 70vh;
+  }
+}
+
+/***********************Modal***************************/
+
+#modal {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 12.5%);
+  width: 80vw;
+  height: 80vh;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+#player_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#players_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.player_caption {
+  background-color: #972a29;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20vw;
+  text-align: center;
+  padding: 1vw;
+  margin: 5px;
+}
+
+#player_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 5px 10px 5px #888888;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.player_img {
+  width: 20vw;
+  height: 35vh;
+}
+
+.modal_title {
+  margin: 10px;
+}
+
+#modal button {
+  margin: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  .player_img {
+    width: 50vw;
+    height: 35vh;
+  }
+
+  #players_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .player_caption {
+    font-size: 16px;
+    width: 200px;
+    padding: 1vw;
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  #players_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player_img {
+    width: 35vw;
+    height: 35vh;
+  }
+
+  .player_caption {
+    font-size: 24px;
+    font-weight: bold;
+    width: 20vw;
+    text-align: center;
+    padding: 1vw;
+    margin: 5px;
   }
 }

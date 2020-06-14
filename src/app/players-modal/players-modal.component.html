@@ -1,0 +1,13 @@
+<div id="modal">
+  <div mat-dialog-title class="modal_title">Team Players</div>
+  <div id="players_grid">
+    <div *ngFor="let player of team.players" id="player_container">
+      <div>
+        <img class="player_img" [src]="player.image" [alt]="player.name" />
+      </div>
+      <div class="player_caption">{{ player.name }}</div>
+      <div class="player_caption">Age: {{ player.age }}</div>
+      <div class="player_caption">Club: {{ player.club }}</div>
+    </div>
+  </div>
+</div>
