@@ -1,5 +1,5 @@
 <div id="teams-grid">
-  <div class="singleTeam" *ngFor="let team of teams">
+  <div class="singleTeam" *ngFor="let team of teams" (click)="selectTeam(team)">
     <div>
       <img src="{{ team.logo }}" alt="{{ team.country }}" />
     </div>

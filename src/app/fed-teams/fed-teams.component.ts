@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Team } from '../modals/team';
 import { TeamsService } from '../services/teams.service';
 import { TeamcarrierService } from '../services/teamcarrier.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-fed-teams',
@@ -13,8 +14,11 @@ export class FedTeamsComponent implements OnInit {
   teamsFed: Team[] = [];
   errorMsg: string;
   federation: string;
+
   constructor(
     private teamsService: TeamsService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
     private teamCarrier: TeamcarrierService
   ) {}
 
@@ -31,5 +35,10 @@ export class FedTeamsComponent implements OnInit {
       },
       (error) => (this.errorMsg = error)
     );
+  }
+
+  selectTeam(team: Team) {
+    this.router.navigate([team.country], { relativeTo: this.activatedRoute });
+    this.teamCarrier.team = team;
   }
 }

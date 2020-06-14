@@ -11,6 +11,7 @@ import { HomeimageComponent } from './homeimage/homeimage.component';
 import { TeamsService } from './services/teams.service';
 import { AllteamsComponent } from './allteams/allteams.component';
 import { FedTeamsComponent } from './fed-teams/fed-teams.component';
+import { DetailedTeamComponent } from './detailed-team/detailed-team.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FedTeamsComponent } from './fed-teams/fed-teams.component';
     HomeimageComponent,
     AllteamsComponent,
     FedTeamsComponent,
+    DetailedTeamComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [TeamsService],

@@ -1,0 +1,19 @@
+<div id="whole_container">
+  <div class="container">
+    <img class="image_logo" [src]="team.logo" [alt]="team.country" />
+    <img class="image_flag" [src]="team.flag" [alt]="team.country" />
+  </div>
+  <div class="container">
+    <div class="title">{{ team.country }}</div>
+  </div>
+  <div class="caption_container">
+    <div class="caption">Participations: {{ team.appearances }}</div>
+    <div class="caption">Winners: {{ team.titles }}</div>
+    <div class="caption">Federation: {{ team.federation }}</div>
+  </div>
+  <div class="container">
+    <button>
+      Team Players
+    </button>
+  </div>
+</div>
